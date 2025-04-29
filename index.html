@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Light Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <i class="fas fa-lightbulb"></i>
+                <h1>Smart Light Scheduler</h1>
+            </div>
+            
+            <div class="schedule-form-container">
+                <form id="schedule-form">
+                    <div class="time-input-group">
+                        <div class="input-wrapper">
+                            <label for="on-time">
+                                <i class="fas fa-sun"></i>
+                                ON Time
+                            </label>
+                            <input type="time" id="on-time" name="on-time" required>
+                        </div>
+                        
+                        <div class="input-wrapper">
+                            <label for="off-time">
+                                <i class="fas fa-moon"></i>
+                                OFF Time
+                            </label>
+                            <input type="time" id="off-time" name="off-time" required>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-calendar-check"></i>
+                        Set Schedule
+                    </button>
+                </form>
+            </div>
+            
+            <div class="status-container">
+                <div class="connection-status">
+                    <span class="status-indicator" id="status-indicator"></span>
+                    <span id="status">Connecting...</span>
+                </div>
+                <div class="current-schedule" id="current-schedule">
+                    No schedule set
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
